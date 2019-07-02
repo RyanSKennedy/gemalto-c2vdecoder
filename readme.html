@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<style>
+h1 {
+font: normal normal bold 175%sans-serif;
+font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+color: #f7941c;
+}
+h2, {
+font: normal normal bold 150% font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;color: #f7941c;
+}
+h3, {
+font: normal normal bold 100% font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;color: #f7941c;
+}
+body, {
+font: normal normal normal smaller sans-serif;</font>
+font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+background-color: White;
+Color: Black;
+margin: 16px;
+}
+ul, {
+font: normal normal normal 100%
+font-family: "Times New Roman", Times, serif;
+list-style-type: disc
+list-style-position: outside;
+text-align: left;
+margin: 16px;
+}
+li {
+font: normal normal normal 100%
+font-family: "Times New Roman", Times, serif;
+text-align: left;
+}
+p{
+font-family: "Times New Roman", Times, serif;
+}
+pre{
+font-family: monospace;
+}
+note{
+font-family: "Times New Roman", Times, serif;
+font-size: x-small;
+}
+code {
+font-family: "Courier New", Courier, monospace;
+font-size: 98%;
+}
+a:link {
+text-decoration: none;
+}
+a:visited {
+text-decoration: none;
+}
+  </style>
+	<title>Sentinel LDK License Generation API - C# Sample for decode C2V from cloned Sentinel SL keys and compare System and Reference fingerprint: Readme</title>
+</head>
+<body>
+
+<h1>Sentinel<sup>&reg;</sup> LDK License Generation API - C# Sample for decode C2V from cloned Sentinel SL keys and compare System and Reference fingerprint (NON OFFICIAL): Readme</h1>
+<hr align="left">
+
+<h2>Overview</h2>
+
+<p>This sample demonstrates how to use of Sentinel LDK License Generation API for decoding C2V in the C# language.</p>
+<p>Sample provide:</p>
+<ul>
+  <li>Possability to create report in *.xlsx format.</li>
+  <li>Can be using with multiple batch codes without re-configuration and re-building of the sample.</li>
+  <li>Sample can showing blocked products, mismatch criteria's in fingerprint and some other data from decoded C2V. </br>
+  Like: </br> 
+  &nbsp&nbsp - update counter; </br>
+  &nbsp&nbsp - haspvlib version; </br>
+  &nbsp&nbsp - hasp fridge version; </br>
+  &nbsp&nbsp - clone protection scheme's for products.</li>
+</ul>
+
+<h2>Additional Information</h2>
+<h3>Supported Operating Systems and Tested Compilers</h3>
+<p>Tested Platforms for work with Samples:</p> 
+<ul>
+  <li>Windows 7 x64</li>
+  <li>Windows 10 x64</li>
+</ul>
+<p>Tested Compilers for Code Samples:</p>
+<ul>
+  <li>Microsoft Visual Studio 2017 (WPF project)</li>
+</ul>
+<blockquote>
+  <p><strong>Note:</strong> The <strong>C2V Decoder.exe</strong> provided in this sample has been compiled with .NET Framework 4.6.1.</p>
+</blockquote>
+  <p>Sample already included <b>DEMOMA.hvc</b> batch code. For using with another batch code's please copy your batch code (<b>*.hvc</b> file/files) to directory: <em>"...\*C2V_Decoder_base_dir*\VendorCode\"</em> (relaunching <strong>C2V Decoder.exe</strong> is not mandatory).</p>
+  <p>For saving report sample required MS Excel. (<em>Optional</em>)
+  </br>Tested version of Excel:
+  <ul>
+    <li>MS Excel 2010</li>
+    <li>MS Excel 2013</li>
+  </ul></p>
+<h2>Usage Notes</h2>
+<p>This section describes how and where can donwnload the sample.</p>
+<h3>Downloading Sample</h3>
+<strong>For downloading sample please use next links:</strong>
+<ul>
+  <li><a href="https://github.com/RyanSKennedy/gemalto-c2vdecoder.git">GitHub</a> - source code of this sample;</li>
+  <li><a href="https://drive.google.com/file/d/1z4hzGfwuQZt-W82q0FX9LkdPB7EXQH_J">Google Drive</a> - already compiled version;</li>
+  <li><a href="https://confluence.gemalto.com/x/rhxcHg">Confluence page</a> - if you have access to SM Pre-Sales articles on Confluence.</li>
+</ul>
+<h2>Description of the Sample Flow</h2>
+<p>The sample consists of several functions. The default flow is as follows:</p>
+<ol>
+  <li>Initialize Licgen API session</li>
+  <br>
+  <li>Get Licgen API version and put it to title of the app</li>
+  <br>
+  <li>Next you can chouse your Batch code which you prefere to use from ListBox. </br> <b>Remeber</b>: before that, <b>*.hvc</b> file with your Batch code should be put in to directory: <em>"...\*C2V_Decoder_base_dir*\VendorCode\"</em></li>
+  <br>
+  <li>After selection of Batch code will be avaliable button <b>Browse</b> for choose your C2V file from cloned Sentinel SL key. Choose your C2V file.</li>
+  <br>
+  <li>After selection of your C2V file will be available button <b>Start</b> for start decoding and analize C2V, push it. <em>(Here working Licgen API function for decode current state.)</em></li>
+  <br>
+  <li>If C2V was corrected, you got the result in <b>DataGridView</b> and in <b>TextBox</b> with results + will be available button <b>Save as</b> - for saving report as <b>*.xlsx</b> file.</li>
+  <br>
+  <li>If something happen whrong you got error via <b>MessageBox</b> or in <b>TextBox</b> with results.</li>
+</ol>
+<br><br>
+<p><font face="Palatino Linotype" color="#000000">&copy; Gemalto 2019. All rights reserved.  Gemalto, the Gemalto logo, are trademarks and service marks of Gemalto and are registered in certain countries.<br>
+  </font></p>
+</body>
+</html>
